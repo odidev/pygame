@@ -62,7 +62,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~\AppData\Local\pip\Cache
-        key: ${{ runner.os }}-pip
+        key: ${{ runner.os }}-${{ matrix.pyversion }}-${{ matrix.arch }}-pip-cache
 
     - name: Install deps
       run: |
@@ -84,6 +84,7 @@ jobs:
     - name: Upload dist
       uses: actions/upload-artifact@v2
       with:
+        name: pygame-windows-wheels
         path: dist/*.whl
 
 #   - name: Upload binaries to Github Releases

@@ -78,6 +78,7 @@ jobs:
     - name: Upload sdist
       uses: actions/upload-artifact@v2
       with:
+        name: pygame-sdist
         path: dist/*.tar.gz
 
 #   - name: Upload binaries to Github Releases
