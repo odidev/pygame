@@ -31,6 +31,28 @@ jobs:
     - os: linux
       name: arm64 sdist
       dist: xenial
+      python: 3.6
+      arch: arm64
+      env:
+        - ARM64=yes
+        - UPLOAD_SDIST_PYPI=yes
+        - GITHUB_UPLOAD=yes
+        - RUN_SDIST=yes
+
+    - os: linux
+      name: arm64 sdist
+      dist: xenial
+      python: 3.7
+      arch: arm64
+      env:
+        - ARM64=yes
+        - UPLOAD_SDIST_PYPI=yes
+        - GITHUB_UPLOAD=yes
+        - RUN_SDIST=yes
+
+    - os: linux
+      name: arm64 sdist
+      dist: xenial
       python: 3.8
       arch: arm64
       env:
@@ -39,6 +61,16 @@ jobs:
         - GITHUB_UPLOAD=yes
         - RUN_SDIST=yes
 
+    - os: linux
+      name: arm64 sdist
+      dist: xenial
+      python: 3.9
+      arch: arm64
+      env:
+        - ARM64=yes
+        - UPLOAD_SDIST_PYPI=yes
+        - GITHUB_UPLOAD=yes
+        - RUN_SDIST=yes
 
     # enable s390x closer to release, it is slow.
     # - os: linux
